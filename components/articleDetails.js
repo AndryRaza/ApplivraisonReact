@@ -12,12 +12,8 @@ import {
 const image = { uri: "https://reactjs.org/logo-og.png" };
 import { Avatar, Button, IconButton, Colors, FAB } from 'react-native-paper';
 
-const ArticleDetails = ({route,navigation}) => {
+const ArticleDetails = () => {
     
-    const test = () =>{
-        props.navigation.navigate('navigation')
-    }
-
     return (
         <View style={style.container}>
             <View style={style.container}>
@@ -28,7 +24,6 @@ const ArticleDetails = ({route,navigation}) => {
                         style={style.fab}
                             small
                             icon="cart-plus"
-                            onPress={test}
                         />
                     </View>
                 </View>

@@ -22,6 +22,7 @@ import Carte from './views/Carte';
 import TabNavigation from './components/tabNavigation';
 import Article from './components/article';
 import ArticleDetails from './components/articleDetails';
+import Inscription from './components/inscription';
 /***************/
 
 const App = () => {
@@ -29,9 +30,12 @@ const App = () => {
   return (
 
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="tab" >
+      <Stack.Navigator initialRouteName="login" >
         <Stack.Screen name="login" component={Login} options={{
           headerShown: false
+        }} />
+        <Stack.Screen name="Inscription" component={Inscription} options={{
+          headerShown: true
         }} />
         <Stack.Screen name="carte" component={Carte} options={{
           headerShown: false

@@ -7,21 +7,25 @@ import {
 
 import { Button, TextInput, Avatar } from 'react-native-paper';
 
-const Login = () => {
+const Login = (props) => {
 
   const [login, setLogin] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [showPassword, setShowPassword] = React.useState(true)
 
-  const show = () =>{
-    setShowPassword( !showPassword)
+  const show = () => {
+    setShowPassword(!showPassword);
+  }
+
+  const log = () => {
+    props.navigation.navigate('tab');
   }
 
   return (
     <View style={styles.container}>
       <View style={styles.titleContainer}>
         <View style={{ justiftyContent: "center", alignItems: "center" }}>
-        <Avatar.Icon size={150} icon="glass-cocktail" />
+          <Avatar.Icon size={150} icon="glass-cocktail" />
         </View>
 
       </View>
@@ -43,9 +47,11 @@ const Login = () => {
           }}
           right={<TextInput.Icon name="eye" onPress={show} />}
         />
-        <Button icon="login" mode="contained" onPress={() => console.log('Pressed')}>
+
+        <Button icon="login" mode="contained" onPress={log}>
           Connexion
         </Button>
+        <Text onPress={()=> props.navigation.navigate('Inscription')} >Pas de compte ? Inscrivez-vous ici</Text>
       </View>
 
     </View>
@@ -55,7 +61,7 @@ const Login = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop:100
+    paddingTop: 100
   },
   formControl: {
     padding: 30,
@@ -64,7 +70,7 @@ const styles = StyleSheet.create({
     flex: 5
   },
   titleContainer: {
-    flex:1,
+    flex: 1,
     alignContent: 'center',
     justifyContent: 'center'
   },

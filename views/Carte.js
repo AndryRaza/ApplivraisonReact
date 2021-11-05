@@ -19,14 +19,16 @@ const Carte = (props) => {
 
     return (
 
-        <ScrollView style={styles.container}>
+        <View style={styles.container} >
              
             <Text style={styles.title}>Cartes apéros</Text>
-            <View style={styles.gridCard}>
+            <ScrollView style={styles.gridCard} showsVerticalScrollIndicator={false}>
                 <Article navigation={props.navigation} />
-            </View>
+                <Article navigation={props.navigation} />
+                <Article navigation={props.navigation} />
+            </ScrollView>
       
-        </ScrollView>
+        </View>
     )
 }
 
@@ -38,19 +40,9 @@ const styles = StyleSheet.create({
     title: {
         textAlign: 'center',
         fontSize: 25,
-        marginBottom: 10
+        marginBottom: 10,
     },
-    gridCard: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-        alignContent: 'center',
-        paddingBottom: 50
-    },
-    card: {
-        width: 150,
-        margin: 5
-    }
+
 })
 
 

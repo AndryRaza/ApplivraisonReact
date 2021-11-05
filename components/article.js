@@ -40,8 +40,7 @@ const Article = (props) => {
 const styles = StyleSheet.create({
 
     card: {
-        width: 150,
-        margin: 5
+        marginBottom:10
     }
 })
 
