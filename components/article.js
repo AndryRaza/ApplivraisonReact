@@ -11,15 +11,17 @@ import {
 const Article = (props) => {
 
     const redirect = () => {
-       props.navigation.navigate('articleDetails')
+       props.navigation.navigate('articleDetails',{
+           itemId : props.id
+       })
     }
 
     return (
         <Card style={styles.card}>
-            <Card.Title title="Card Title" subtitle="Card Subtitle" />
-            <Card.Cover source={{ uri: 'https://picsum.photos/700' }} />
+            <Card.Cover source={{ uri: props.img }} />
+            <Card.Title title={props.title} subtitle={props.description}  right={() => <Text style={styles.prix}>{props.price}</Text>}/>
             <Card.Actions style={{
-                justifyContent: 'flex-end'
+                justifyContent: 'flex-start'
             }}>
                 <IconButton
                     icon="magnify"
@@ -41,6 +43,10 @@ const styles = StyleSheet.create({
 
     card: {
         marginBottom:10
+    },
+    prix:{
+        fontSize:22,
+        marginRight:10
     }
 })
 

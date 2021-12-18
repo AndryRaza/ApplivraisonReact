@@ -21,9 +21,10 @@
     "react-native-paper": "^4.9.2",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.7.2",
+    "react-native-super-grid": "^4.2.0",
     "react-native-vector-icons": "^8.1.0",
-    "react-redux": "^7.2.5",
-    "redux": "^4.1.1",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
     "tailwind-rn": "^3.0.1"
   },
   "devDependencies": {

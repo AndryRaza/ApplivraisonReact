@@ -23,6 +23,7 @@ import TabNavigation from './components/tabNavigation';
 import Article from './components/article';
 import ArticleDetails from './components/articleDetails';
 import Inscription from './components/inscription';
+import Panier from './views/Panier';
 /***************/
 
 const App = () => {
@@ -30,7 +31,7 @@ const App = () => {
   return (
 
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="login" >
+      <Stack.Navigator initialRouteName="carte" >
         <Stack.Screen name="login" component={Login} options={{
           headerShown: false
         }} />
@@ -47,6 +48,7 @@ const App = () => {
           headerShown: false
         }} />
         <Stack.Screen name="articleDetails" component={ArticleDetails}/>
+        <Stack.Screen name="Panier" component={Panier}/>
 
       </Stack.Navigator>
     </NavigationContainer>
